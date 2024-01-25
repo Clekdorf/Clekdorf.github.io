@@ -14,13 +14,16 @@
 <script>
     let n = 1;
     let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-    document.querySelector("h1").addEventListener("click", function () {
-        this.style.color = colors[n % colors.length];
+    const t = document.querySelector("h1")
+
+    setInterval(() => {    
+        t.style.color = colors[n % colors.length];
+
         if (n++ % colors.length == 2) {
-            this.innerText = "Du er Fed!"
+            t.innerText = "Du er Fed!";
         }else {
-            this.innerText = "Du er Bøsse"
+            t.innerText = "Du er Bøsse";
         }
-    })
+    }, 500);
 </script>
 </html>
